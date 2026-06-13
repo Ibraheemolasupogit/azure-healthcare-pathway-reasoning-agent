@@ -50,7 +50,7 @@ The project demonstrates a practical agent use case with:
 - Explainable reasoning.
 - Human-in-the-loop escalation support.
 - Safety-aware handling of sensitive healthcare context.
-- A path from local prototype to Microsoft AI Foundry and Azure AI agent deployment.
+- A future path from local prototype to Microsoft AI Foundry and Azure AI agent patterns.
 
 ## Data Approach
 
@@ -66,4 +66,4 @@ The initial demo should show a small set of simulated pathways, highlight which 
 - Simple, understandable architecture.
 - Simulated data only.
 - Outputs that are structured, explainable, and useful.
-- Strong alignment with Microsoft AI Foundry and Azure AI agent patterns.
+- Clear intended future alignment with Microsoft AI Foundry and Azure AI agent patterns.

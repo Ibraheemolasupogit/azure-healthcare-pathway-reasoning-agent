@@ -71,5 +71,4 @@ Highlight:
 - Human review reminder.
 - Safety statement.
 
-Close by noting that this is a local-first prototype aligned with Microsoft AI Foundry and Azure AI agent patterns, without calling external AI APIs yet.
-
+Close by noting that this is a local-first prototype designed for future alignment with Microsoft AI Foundry and Azure AI agent patterns, without calling external AI APIs in the current version.

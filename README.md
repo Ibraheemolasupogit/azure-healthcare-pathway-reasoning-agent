@@ -2,7 +2,7 @@
 
 A local-first Microsoft Agents League hackathon prototype for reasoning over simulated healthcare pathway data. The project explores how an AI-assisted agent could help healthcare teams identify operational risks, explain pathway reasoning, recommend next actions, and produce structured escalation notes.
 
-This repository is intentionally starting with the foundation only: documentation, architecture notes, project structure, and initial dependencies. It does not include real patient data or a production clinical workflow.
+This repository contains a demo-ready local prototype with a synthetic dataset, deterministic reasoning engine, escalation note generator, Streamlit interface, sample outputs, and hackathon documentation. It does not include real patient data or a production clinical workflow.
 
 ## Healthcare Problem Statement
 
@@ -32,20 +32,20 @@ This project is designed for the Microsoft Agents League hackathon as a professi
 - Agentic reasoning over structured, simulated healthcare operations data.
 - Human-readable explanations of risk identification.
 - Responsible AI positioning with clear data privacy boundaries.
-- Alignment with Azure AI and Microsoft AI Foundry concepts.
+- Intended future alignment with Azure AI and Microsoft AI Foundry concepts.
 - A practical pathway from local prototype to cloud-hosted agent workflow.
 
 ## Microsoft Technology Alignment
 
-The planned implementation is aligned with Microsoft AI Foundry and Azure AI agent patterns:
+The current prototype is local-first. It is designed for future alignment with Microsoft AI Foundry and Azure AI agent patterns:
 
-- **Azure AI Foundry** for agent design, evaluation, deployment planning, and responsible AI workflows.
-- **Azure OpenAI Service** for language reasoning, explanation generation, and escalation note drafting.
-- **Azure AI Agent Service** as a target pattern for orchestrating reasoning, tool use, and structured outputs.
-- **Azure Functions** as a possible lightweight execution layer for pathway analysis tasks.
-- **Azure Storage or Azure SQL** as future options for simulated pathway datasets.
+- **Microsoft AI Foundry** as a future environment for agent design, evaluation, tracing, and responsible AI workflows.
+- **Azure OpenAI Service** as a possible future language reasoning layer, if appropriate.
+- **Azure AI Agent Service** as a future target pattern for orchestrating reasoning, tool use, and structured outputs.
+- **Azure Functions** as a possible future lightweight execution layer for pathway analysis tasks.
+- **Azure Storage or Azure SQL** as future options for simulated or governed pathway datasets.
 - **Application Insights** for future observability, tracing, and evaluation telemetry.
-- **Microsoft Teams integration** as a future channel for escalation note delivery.
+- **Microsoft Teams or Microsoft 365 Copilot extension** as optional future channels for escalation workflows.
 
 The initial repository remains local-first so the concept can be developed, reviewed, and demonstrated without cloud dependencies.
 
@@ -61,7 +61,7 @@ The intended architecture follows a simple local prototype flow:
 6. Documentation and hackathon materials live in `docs/`.
 7. Evidence for demos, screenshots, and evaluation results lives in `evidence/`.
 
-Future Azure deployment can map these local responsibilities to Azure AI Foundry agent assets, Azure-hosted storage, serverless execution, and monitored endpoints.
+Future Azure deployment could map these local responsibilities to Microsoft AI Foundry agent assets, Azure-hosted storage, serverless execution, and monitored endpoints. No Azure deployment is included in the current prototype.
 
 ## Key Features
 
@@ -75,11 +75,24 @@ Planned prototype capabilities include:
 - Evaluate outputs for consistency, safety, and usefulness.
 - Keep all demonstrations based on simulated data only.
 
-## Safety And Data Privacy
+## Responsible AI And Safety
 
 This project must use simulated data only. Do not add real patient data, protected health information, confidential operational data, or identifiable clinical records.
 
-The prototype is intended for operational reasoning demonstrations and portfolio use. It is not a medical device, clinical decision support system, diagnostic tool, or replacement for professional healthcare judgement. Any future real-world adaptation would require governance, privacy review, clinical safety assessment, security controls, and human oversight.
+The prototype is intended for operational decision support demonstrations and portfolio use. It is not a medical device, diagnostic tool, treatment recommendation system, or replacement for professional healthcare judgement.
+
+Current safety boundaries:
+
+- Synthetic data only.
+- No real patient data.
+- No protected health information.
+- No clinical diagnosis.
+- Operational decision support only.
+- Human review required before action.
+- Transparent deterministic reasoning.
+- No external AI API calls in the current prototype.
+
+Any future real-world adaptation would require governance, privacy review, clinical safety assessment, security controls, model evaluation, and human oversight.
 
 ## Synthetic Dataset
 
@@ -91,7 +104,7 @@ The dataset is intended to support operational decision support prototyping, suc
 
 The first reasoning engine is deterministic and rule based. It reads one simulated pathway case, evaluates transparent operational risk factors, calculates an additive risk score, assigns a risk level, and returns a plain-language explanation with recommended next actions.
 
-The current rules consider waiting time against target, recent contact history, diagnostic progress, treatment booking status, capacity constraints, administrative blockers, urgent priority, delayed appointments, and pathway type. No external AI APIs are called in this milestone.
+The current rules consider waiting time against target, recent contact history, diagnostic progress, treatment booking status, capacity constraints, administrative blockers, urgent priority, delayed appointments, and pathway type. No external AI APIs are called in the current prototype.
 
 ## Escalation Notes
 
@@ -110,9 +123,11 @@ The app does not call external AI APIs and does not deploy any Azure resources.
 - [Agent architecture](docs/architecture/agent_architecture.md)
 - [High-level architecture](docs/architecture/high_level_architecture.md)
 - [Submission summary](docs/hackathon/submission_summary.md)
+- [Judging alignment](docs/hackathon/judging_alignment.md)
 - [Demo walkthrough](docs/hackathon/demo_walkthrough.md)
 - [Demo script](docs/hackathon/demo_script.md)
 - [Reasoning examples](docs/hackathon/reasoning_examples.md)
+- [Evidence README](evidence/README.md)
 - [Sample escalation note: SIM-0017](evidence/sample_outputs/escalation_note_SIM-0017.md)
 - [Sample escalation note: SIM-0009](evidence/sample_outputs/escalation_note_SIM-0009.md)
 - [Sample escalation note: SIM-0027](evidence/sample_outputs/escalation_note_SIM-0027.md)
@@ -145,11 +160,9 @@ streamlit run app.py
 
 ## Planned Roadmap
 
-- **Milestone 1:** Repository foundation, architecture notes, and hackathon brief.
-- **Milestone 2:** Add simulated pathway dataset and schema documentation.
-- **Milestone 3:** Implement local data loader and validation checks.
-- **Milestone 4:** Build initial risk scoring and reasoning workflow.
-- **Milestone 5:** Generate structured escalation notes.
-- **Milestone 6:** Add evaluation examples and safety checks.
-- **Milestone 7:** Create a demo workflow aligned with Microsoft AI Foundry patterns.
-- **Milestone 8:** Prepare final hackathon evidence, screenshots, and presentation materials.
+- **Completed:** Repository foundation, synthetic dataset, data loader, validation tests, deterministic reasoning engine, escalation notes, Streamlit demo, sample outputs, and hackathon submission documentation.
+- **Next:** Add screenshots and a short demo video.
+- **Future:** Add Azure AI Foundry evaluation assets.
+- **Future:** Add richer synthetic scenario coverage.
+- **Future:** Add optional Microsoft Teams or Microsoft 365 Copilot extension workflow.
+- **Future:** Add Azure deployment path after local prototype validation.

@@ -74,7 +74,7 @@ flowchart LR
 | Local model calls | Azure OpenAI Service |
 | Local evaluation scripts | Azure AI Foundry evaluations |
 | Local Streamlit demo | Azure App Service or Azure Container Apps |
-| Local escalation note outputs | Azure Functions, Microsoft Teams, or Microsoft 365 Copilot extension |
+| Local escalation note outputs | Future Azure Functions, Microsoft Teams, or Microsoft 365 Copilot extension workflow |
 | Local logs | Application Insights |
 
 ## Safety Boundary
