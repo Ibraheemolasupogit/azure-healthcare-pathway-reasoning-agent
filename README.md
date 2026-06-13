@@ -105,6 +105,18 @@ The local Streamlit app lets users select a synthetic pathway case, review the c
 
 The app does not call external AI APIs and does not deploy any Azure resources.
 
+## Hackathon Documentation
+
+- [Agent architecture](docs/architecture/agent_architecture.md)
+- [High-level architecture](docs/architecture/high_level_architecture.md)
+- [Submission summary](docs/hackathon/submission_summary.md)
+- [Demo walkthrough](docs/hackathon/demo_walkthrough.md)
+- [Demo script](docs/hackathon/demo_script.md)
+- [Reasoning examples](docs/hackathon/reasoning_examples.md)
+- [Sample escalation note: SIM-0017](evidence/sample_outputs/escalation_note_SIM-0017.md)
+- [Sample escalation note: SIM-0009](evidence/sample_outputs/escalation_note_SIM-0009.md)
+- [Sample escalation note: SIM-0027](evidence/sample_outputs/escalation_note_SIM-0027.md)
+
 ## Local Development
 
 Install dependencies:

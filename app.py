@@ -23,8 +23,8 @@ def display_case_details(case: pd.Series) -> None:
     """Render selected case details."""
     st.subheader("Selected Pathway Case")
     st.dataframe(
-        case.to_frame(name="value"),
-        use_container_width=True,
+        case.to_frame(name="value").astype(str),
+        width="stretch",
     )
 
 
@@ -36,7 +36,7 @@ def display_risk_factors(factors: list[dict[str, object]]) -> None:
 
     st.dataframe(
         pd.DataFrame(factors)[["name", "score", "detail"]],
-        use_container_width=True,
+        width="stretch",
         hide_index=True,
     )
 

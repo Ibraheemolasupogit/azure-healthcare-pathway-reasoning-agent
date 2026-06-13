@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This document describes the proposed architecture for the Azure Healthcare Pathway Reasoning Agent. The current repository contains the foundation only; implementation will be added in later milestones.
+This document describes the current local-first architecture for the Azure Healthcare Pathway Reasoning Agent. The prototype now includes a synthetic dataset, data validation, deterministic risk rules, an explainable reasoning engine, structured escalation notes, sample evidence outputs, and a Streamlit demo app.
 
 ## Design Principles
 
@@ -17,14 +17,13 @@ This document describes the proposed architecture for the Azure Healthcare Pathw
 ```mermaid
 flowchart LR
     A["Simulated pathway data"] --> B["Data loading and validation"]
-    B --> C["Reasoning agent"]
-    C --> D["Risk explanation"]
-    C --> E["Recommended next action"]
-    C --> F["Structured escalation note"]
-    D --> G["Evaluation checks"]
-    E --> G
+    B --> C["Risk rules"]
+    C --> D["Reasoning engine"]
+    D --> E["Risk explanation and next actions"]
+    D --> F["Structured escalation note"]
+    E --> G["Streamlit demo app"]
     F --> G
-    G --> H["Demo evidence and reports"]
+    F --> H["Sample evidence outputs"]
 ```
 
 ## Repository Responsibilities
@@ -33,13 +32,14 @@ flowchart LR
 | --- | --- |
 | `data/sample/` | Synthetic sample pathway records. |
 | `src/data/` | Data loading, schema validation, and transformation utilities. |
-| `src/agent/` | Agent orchestration, pathway reasoning, and risk interpretation. |
-| `src/evaluation/` | Output quality checks, safety checks, and repeatable evaluation examples. |
-| `src/reporting/` | Structured escalation note and report generation. |
+| `src/agent/` | Risk rules, pathway reasoning, and escalation note generation. |
+| `src/evaluation/` | Reserved for future output quality checks and repeatable evaluation examples. |
+| `src/reporting/` | Reserved for future report generation modules. |
 | `docs/architecture/` | Architecture documentation and design decisions. |
 | `docs/hackathon/` | Hackathon brief, judging notes, and project positioning. |
 | `evidence/` | Demo evidence, generated screenshots, evaluation outputs, and supporting artifacts. |
 | `tests/` | Automated tests for data, reasoning, evaluation, and reporting modules. |
+| `app.py` | Streamlit demo interface. |
 
 ## Planned Component Model
 
@@ -50,15 +50,19 @@ flowchart LR
 
 2. **Reasoning Layer**
    - Applies operational risk heuristics.
-   - Uses an agent pattern to explain why a pathway is flagged.
+   - Uses a deterministic agent pattern to explain why a pathway is flagged.
    - Produces structured reasoning outputs.
 
-3. **Reporting Layer**
+3. **Escalation Note Layer**
    - Converts reasoning outputs into escalation notes.
-   - Supports consistent templates for human review.
+   - Supports consistent Markdown-ready templates for human review.
 
-4. **Evaluation Layer**
-   - Checks that outputs are complete, safe, and grounded in simulated data.
+4. **Demo Layer**
+   - Provides a Streamlit interface for case selection, reasoning review, and note download.
+   - Supports a short hackathon demo workflow.
+
+5. **Evidence Layer**
+   - Stores sample Markdown escalation notes for judging and review.
    - Supports repeatable hackathon demos.
 
 ## Future Azure Mapping
@@ -69,10 +73,10 @@ flowchart LR
 | Local reasoning workflow | Azure AI Agent Service or Azure AI Foundry agent |
 | Local model calls | Azure OpenAI Service |
 | Local evaluation scripts | Azure AI Foundry evaluations |
-| Local report outputs | Azure Functions and Microsoft Teams integration |
+| Local Streamlit demo | Azure App Service or Azure Container Apps |
+| Local escalation note outputs | Azure Functions, Microsoft Teams, or Microsoft 365 Copilot extension |
 | Local logs | Application Insights |
 
 ## Safety Boundary
 
 The agent must not be used for diagnosis, treatment decisions, or clinical prioritization. It is positioned as an operational reasoning prototype using simulated data. All outputs should be reviewed by humans and treated as draft support material.
-
