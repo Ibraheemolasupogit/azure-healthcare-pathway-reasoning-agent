@@ -81,6 +81,12 @@ This project must use simulated data only. Do not add real patient data, protect
 
 The prototype is intended for operational reasoning demonstrations and portfolio use. It is not a medical device, clinical decision support system, diagnostic tool, or replacement for professional healthcare judgement. Any future real-world adaptation would require governance, privacy review, clinical safety assessment, security controls, and human oversight.
 
+## Synthetic Dataset
+
+The sample dataset in `data/sample/simulated_pathway_cases.csv` is fully synthetic. It contains fictional operational pathway scenarios only and does not include real patient data, protected health information, or identifiable clinical records.
+
+The dataset is intended to support operational decision support prototyping, such as identifying delayed appointments, missing diagnostics, capacity constraints, admin blockers, and pathways needing human review. The project does not provide clinical diagnosis, clinical prioritization, treatment advice, or medical decision-making.
+
 ## Planned Roadmap
 
 - **Milestone 1:** Repository foundation, architecture notes, and hackathon brief.
@@ -91,4 +97,3 @@ The prototype is intended for operational reasoning demonstrations and portfolio
 - **Milestone 6:** Add evaluation examples and safety checks.
 - **Milestone 7:** Create a demo workflow aligned with Microsoft AI Foundry patterns.
 - **Milestone 8:** Prepare final hackathon evidence, screenshots, and presentation materials.
-

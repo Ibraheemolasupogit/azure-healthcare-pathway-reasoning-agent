@@ -1,0 +1,31 @@
+case_id,pathway_type,referral_date,days_waiting,target_days,current_stage,last_contact_days,diagnostic_status,treatment_status,risk_flags,capacity_issue,admin_blocker,clinical_priority,next_appointment_date,notes
+SIM-0001,Cancer 2WW,2026-05-29,15,14,First specialist appointment,2,Completed,Not required,delayed appointment,No,No,Urgent,2026-06-15,Synthetic case: first appointment booked one day beyond target due to clinic availability.
+SIM-0002,Cancer 2WW,2026-06-03,10,14,Triage review,1,Pending,Not required,missing diagnostics,No,No,Urgent,2026-06-14,Synthetic case: referral accepted and diagnostic slot requested.
+SIM-0003,Cancer 2WW,2026-06-09,4,14,Initial booking,0,Not started,Not required,none,No,No,Routine,2026-06-18,Synthetic case: pathway recently opened with appointment confirmed.
+SIM-0004,Cancer 2WW,2026-05-24,20,14,Awaiting diagnostic result,8,Delayed,Not required,long wait; missing diagnostics; no recent contact,No,No,Urgent,2026-06-20,Synthetic case: diagnostic report delayed and patient contact overdue.
+SIM-0005,Cancer 2WW,2026-06-01,12,14,Booking query,6,Booked,Not required,admin blocker,No,Yes,Routine,2026-06-16,Synthetic case: demographic query blocking confirmation letter.
+SIM-0006,Cancer 62-day,2026-04-09,65,62,Treatment planning,3,Completed,Not yet booked,long wait; treatment not yet booked,No,No,Urgent,2026-06-19,Synthetic case: treatment discussion completed but theatre date not confirmed.
+SIM-0007,Cancer 62-day,2026-04-21,53,62,MDT review,5,Completed,Planned,none,No,No,Urgent,2026-06-17,Synthetic case: within target with treatment plan review scheduled.
+SIM-0008,Cancer 62-day,2026-04-14,60,62,Pre-treatment assessment,12,Completed,Booked,no recent contact; treatment not yet booked,Yes,No,Urgent,2026-06-24,Synthetic case: assessment delayed by limited pre-op capacity.
+SIM-0009,Cancer 62-day,2026-03-30,75,62,Awaiting diagnostics,9,Delayed,Not yet booked,long wait; missing diagnostics; capacity issue,Yes,No,Urgent,2026-06-27,Synthetic case: imaging backlog delaying treatment decision.
+SIM-0010,Cancer 62-day,2026-05-04,40,62,Results discussion,2,Completed,Not yet booked,treatment not yet booked,No,No,Routine,2026-06-18,Synthetic case: results available and treatment booking pending.
+SIM-0011,RTT elective,2026-01-10,154,126,Outpatient follow-up,4,Completed,Planned,long wait,No,No,Routine,2026-06-21,Synthetic case: elective pathway beyond 18-week target awaiting follow-up.
+SIM-0012,RTT elective,2026-02-28,105,126,Diagnostics booked,7,Booked,Not required,none,No,No,Routine,2026-06-25,Synthetic case: within target and diagnostic appointment scheduled.
+SIM-0013,RTT elective,2025-12-20,175,126,Surgical scheduling,14,Completed,Not yet booked,long wait; no recent contact; treatment not yet booked,Yes,No,Routine,2026-07-02,Synthetic case: theatre capacity limiting booking options.
+SIM-0014,RTT elective,2026-03-01,104,126,Referral validation,11,Not started,Not required,admin blocker; no recent contact,No,Yes,Routine,2026-06-28,Synthetic case: referral information incomplete and contact overdue.
+SIM-0015,RTT elective,2026-01-30,134,126,Clinical review,5,Completed,Planned,long wait,No,No,Urgent,2026-06-20,Synthetic case: priority upgraded after review and close monitoring required.
+SIM-0016,RTT elective,2026-04-02,72,126,Waiting list,3,Completed,Planned,none,No,No,Routine,2026-07-08,Synthetic case: stable waiting list entry with plan documented.
+SIM-0017,Diagnostic pathway,2026-05-10,34,28,Imaging request,6,Booked,Not required,long wait; delayed appointment,Yes,No,Routine,2026-06-22,Synthetic case: imaging booked after target due to scanner capacity.
+SIM-0018,Diagnostic pathway,2026-05-21,23,28,Sample processing,2,Pending,Not required,none,No,No,Routine,2026-06-17,Synthetic case: pending result within target window.
+SIM-0019,Diagnostic pathway,2026-05-04,40,28,Awaiting report,13,Delayed,Not required,long wait; missing diagnostics; no recent contact,No,No,Urgent,2026-06-26,Synthetic case: report validation delayed and no recent update recorded.
+SIM-0020,Diagnostic pathway,2026-06-05,8,28,Test booking,1,Booked,Not required,none,No,No,Routine,2026-06-19,Synthetic case: test booked promptly after referral.
+SIM-0021,Diagnostic pathway,2026-04-29,45,28,Booking correction,10,Not started,Not required,long wait; admin blocker; missing diagnostics,No,Yes,Routine,2026-06-30,Synthetic case: order coding issue blocking diagnostic scheduling.
+SIM-0022,Diagnostic pathway,2026-05-16,28,28,Capacity review,4,Booked,Not required,capacity issue,Yes,No,Routine,2026-06-24,Synthetic case: at target threshold with capacity review underway.
+SIM-0023,Urgent care follow-up,2026-06-07,6,7,Follow-up booking,1,Not required,Not required,none,No,No,Urgent,2026-06-14,Synthetic case: urgent follow-up appointment arranged within target.
+SIM-0024,Urgent care follow-up,2026-06-01,12,7,Awaiting clinic slot,5,Not required,Not required,long wait; delayed appointment; capacity issue,Yes,No,Urgent,2026-06-18,Synthetic case: follow-up delayed by clinic slot shortage.
+SIM-0025,Urgent care follow-up,2026-05-31,13,7,Contact attempt,9,Not required,Not required,long wait; no recent contact,No,No,Urgent,2026-06-17,Synthetic case: repeated contact attempts needed before review.
+SIM-0026,Urgent care follow-up,2026-06-10,3,7,Discharge advice review,0,Not required,Not required,none,No,No,Routine,2026-06-16,Synthetic case: early review arranged after urgent care attendance.
+SIM-0027,Urgent care follow-up,2026-06-03,10,7,Referral clarification,4,Not required,Not required,admin blocker; delayed appointment,No,Yes,Urgent,2026-06-20,Synthetic case: missing referral detail delaying correct clinic allocation.
+SIM-0028,Cancer 2WW,2026-05-31,13,14,Diagnostic appointment,3,Booked,Not required,urgent clinical priority,No,No,Urgent,2026-06-13,Synthetic case: urgent priority marked with diagnostic appointment today.
+SIM-0029,RTT elective,2026-02-05,129,126,Treatment booking,2,Completed,Not yet booked,long wait; treatment not yet booked,No,No,Routine,2026-06-23,Synthetic case: just beyond target and treatment slot still pending.
+SIM-0030,Cancer 62-day,2026-04-17,57,62,Treatment confirmation,1,Completed,Booked,urgent clinical priority,No,No,Urgent,2026-06-16,Synthetic case: urgent priority with treatment date confirmed inside target.
