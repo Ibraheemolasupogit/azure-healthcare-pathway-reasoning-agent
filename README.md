@@ -99,6 +99,38 @@ The escalation note generator turns one simulated pathway case and its reasoning
 
 Escalation notes are designed to support pathway coordination workflows by making the reasoning output easier to review and act on. They remain deterministic, explainable, and local-first. They are operational decision support only, are not clinical diagnosis, and require human review before action.
 
+## Streamlit Demo App
+
+The local Streamlit app lets users select a synthetic pathway case, review the case details, run the deterministic reasoning engine, inspect risk factors and recommended actions, and generate a structured escalation note. The note can be downloaded as Markdown for demo evidence or review.
+
+The app does not call external AI APIs and does not deploy any Azure resources.
+
+## Local Development
+
+Install dependencies:
+
+```bash
+python3 -m pip install -r requirements.txt
+```
+
+Run tests:
+
+```bash
+python3 -m pytest
+```
+
+Run lint checks:
+
+```bash
+python3 -m ruff check .
+```
+
+Run the Streamlit app:
+
+```bash
+streamlit run app.py
+```
+
 ## Planned Roadmap
 
 - **Milestone 1:** Repository foundation, architecture notes, and hackathon brief.
