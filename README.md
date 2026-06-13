@@ -87,6 +87,12 @@ The sample dataset in `data/sample/simulated_pathway_cases.csv` is fully synthet
 
 The dataset is intended to support operational decision support prototyping, such as identifying delayed appointments, missing diagnostics, capacity constraints, admin blockers, and pathways needing human review. The project does not provide clinical diagnosis, clinical prioritization, treatment advice, or medical decision-making.
 
+## Reasoning Workflow
+
+The first reasoning engine is deterministic and rule based. It reads one simulated pathway case, evaluates transparent operational risk factors, calculates an additive risk score, assigns a risk level, and returns a plain-language explanation with recommended next actions.
+
+The current rules consider waiting time against target, recent contact history, diagnostic progress, treatment booking status, capacity constraints, administrative blockers, urgent priority, delayed appointments, and pathway type. No external AI APIs are called in this milestone.
+
 ## Planned Roadmap
 
 - **Milestone 1:** Repository foundation, architecture notes, and hackathon brief.
