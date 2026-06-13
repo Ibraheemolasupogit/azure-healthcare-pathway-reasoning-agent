@@ -65,7 +65,7 @@ Future Azure deployment could map these local responsibilities to Microsoft AI F
 
 ## Key Features
 
-Planned prototype capabilities include:
+Implemented prototype capabilities include:
 
 - Load simulated healthcare pathway records.
 - Detect operational risk indicators such as delays, missing next steps, unclear ownership, or approaching targets.
