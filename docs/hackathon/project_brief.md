@@ -28,6 +28,12 @@ The agent will analyze simulated pathway records and produce structured outputs:
 
 The system will be designed around human oversight and transparent reasoning.
 
+## Escalation Note Feature
+
+The prototype now includes a deterministic escalation note generator. It uses the rule-based reasoning output to produce a structured operational note with the case summary, pathway type, risk level, score, key risk factors, reasoning summary, recommended actions, suggested owner or team, urgency wording, and a human review reminder.
+
+The note is designed for healthcare pathway coordination contexts and includes a safety statement that it is operational decision support only, not clinical diagnosis, and requires human review before action.
+
 ## Target Users
 
 - Healthcare operations teams.
@@ -61,4 +67,3 @@ The initial demo should show a small set of simulated pathways, highlight which 
 - Simulated data only.
 - Outputs that are structured, explainable, and useful.
 - Strong alignment with Microsoft AI Foundry and Azure AI agent patterns.
-

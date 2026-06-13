@@ -93,6 +93,12 @@ The first reasoning engine is deterministic and rule based. It reads one simulat
 
 The current rules consider waiting time against target, recent contact history, diagnostic progress, treatment booking status, capacity constraints, administrative blockers, urgent priority, delayed appointments, and pathway type. No external AI APIs are called in this milestone.
 
+## Escalation Notes
+
+The escalation note generator turns one simulated pathway case and its reasoning output into a structured operational note. Each note includes a case summary, pathway type, risk level, risk score, key risk factors, reasoning summary, recommended next actions, suggested owner or team, urgency wording, and a human review reminder.
+
+Escalation notes are designed to support pathway coordination workflows by making the reasoning output easier to review and act on. They remain deterministic, explainable, and local-first. They are operational decision support only, are not clinical diagnosis, and require human review before action.
+
 ## Planned Roadmap
 
 - **Milestone 1:** Repository foundation, architecture notes, and hackathon brief.

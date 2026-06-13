@@ -24,6 +24,13 @@ def _case_to_dict(case: dict[str, Any] | pd.Series) -> dict[str, Any]:
 def _build_reasoning_explanation(
     case: dict[str, Any], risk_level: str, factors: list[dict[str, Any]]
 ) -> str:
+    pathway_label = str(case["pathway_type"])
+    pathway_phrase = (
+        pathway_label
+        if pathway_label.lower().endswith("pathway")
+        else f"{pathway_label} pathway"
+    )
+
     if not factors:
         return (
             f"Case {case['case_id']} is currently assessed as Low risk because no "
@@ -33,7 +40,7 @@ def _build_reasoning_explanation(
     factor_details = " ".join(factor["detail"] for factor in factors)
     return (
         f"Case {case['case_id']} is assessed as {risk_level} risk on the "
-        f"{case['pathway_type']} pathway. {factor_details}"
+        f"{pathway_phrase}. {factor_details}"
     )
 
 
